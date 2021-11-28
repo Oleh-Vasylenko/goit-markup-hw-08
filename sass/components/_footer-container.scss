@@ -1,0 +1,4 @@
+.footer-container {
+  @include centeredFlex();
+  align-items: baseline;
+}

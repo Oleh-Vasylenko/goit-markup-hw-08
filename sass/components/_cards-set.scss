@@ -1,0 +1,47 @@
+.cards-set {
+  @include centeredFlex();
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style: none;
+
+  &__card {
+    /* evenly divide the width by 3 including margins.*/
+    width: calc((100% - 2 * 30px) / 3);
+    height: 404px;
+    margin-right: 30px;
+    border-right: 1px solid $header-line-color;
+    border-left: 1px solid $header-line-color;
+    border-bottom: 1px solid $header-line-color;
+    transition: $box-shadow-transition-250ms;
+
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &__card:nth-child(3n) {
+    margin-right: 0px;
+  }
+
+  /* add margin-botttom up to and inluding sixth element, no margin for further elements */
+  &__card:nth-child(-n + 6) {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    position: relative;
+    width: 370px;
+    height: 404px;
+    transition: $box-shadow-transition-250ms;
+    text-decoration: none;
+    display: block;
+
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+}

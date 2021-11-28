@@ -1,0 +1,12 @@
+.header-contacts__icon-smartphone {
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  fill: $text-color;
+  transition: $fill-transition-250ms;
+
+  .header-contacts__link:hover &,
+  .header-contacts__link:focus & {
+    fill: $accent-color;
+  }
+}

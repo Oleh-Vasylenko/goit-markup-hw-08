@@ -1,0 +1,12 @@
+.header-contacts__icon-envelope {
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+  fill: $text-color;
+  transition: $fill-transition-250ms;
+
+  .header-contacts__link:hover &,
+  .header-contact__link:focus & {
+    fill: $accent-color;
+  }
+}

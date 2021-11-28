@@ -1,0 +1,10 @@
+.user-agreement {
+  font-family: Roboto;
+  @include centeredFlex();
+  cursor: pointer;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: $text-color;
+  margin-bottom: 30px;
+}

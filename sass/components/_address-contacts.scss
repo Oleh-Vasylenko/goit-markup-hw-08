@@ -1,0 +1,20 @@
+.address-contacts {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__item {
+    margin-top: 9px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $transparent-text-color;
+    transition: $color-transition-250ms;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
