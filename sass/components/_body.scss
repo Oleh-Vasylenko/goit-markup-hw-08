@@ -7,3 +7,7 @@ body {
   color: $text-color;
   background-color: $white;
 }
+
+body.modal-open {
+  overflow: hidden;
+}

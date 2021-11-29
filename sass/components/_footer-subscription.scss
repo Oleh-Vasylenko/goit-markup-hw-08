@@ -1,11 +1,9 @@
 .footer-subscription {
-  @include centeredFlex();
-  margin-left: 93px;
-  flex-direction: column;
+  display: block;
+  text-align: center;
 
   &__label {
-    display: flex;
-    flex-direction: column;
+    display: block;
     padding: 0;
     font-family: 'Roboto';
     font-weight: 700;
@@ -17,16 +15,16 @@
   }
 
   &__wrapper {
-    @include centeredFlex(inline-flex);
+    @include centeredFlex();
+    flex-direction: column;
     margin-top: 20px;
   }
 
   &__input {
-    margin-right: 12px;
+    margin-bottom: 20px;
     padding: 15px 15px;
-    width: 358px;
+    width: 100%;
     height: 50px;
-
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -41,5 +39,45 @@
     line-height: calc(20 / 16);
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  & .button-footer {
+    @include centeredFlex();
+    padding: 10px;
+    margin: 0;
+
+    &__icon {
+      margin-left: 10px;
+      width: 24px;
+      height: 24px;
+      fill: $white;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 60px;
+    &__input {
+      width: 450px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__wrapper {
+      @include centeredFlex();
+      margin-top: 20px;
+      flex-direction: row;
+    }
+
+    &__input {
+      width: 358px;
+      margin-bottom: 0;
+      margin-right: 12px;
+    }
   }
 }
